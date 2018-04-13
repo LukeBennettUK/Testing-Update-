@@ -1,0 +1,279 @@
+* {
+  font-family: 'Raleway', sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* height: 2000px; */
+  /* background: black; */
+}
+
+ul {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+/*************************************************
+HERO
+**************************************************/
+
+.hero {
+  background: pink url('../img/background.jpg') no-repeat fixed;
+  background-size: cover;
+  position: relative;
+  /* width: 100%; */
+  height: 900px;
+  /* overflow: hidden; */
+}
+
+
+
+/* Vertical Nav */
+.nav {
+	top: 0;
+	left: 0;
+  /* z-index: 1000; */
+}
+
+.nav li {
+  font-size: .7em;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-transform: uppercase;
+}
+
+.nav li a {
+  display: block;
+  padding: 20px;
+  letter-spacing: 1px;
+  transition: all .2s ease-in-out;
+}
+
+.row {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.startLogo {
+  position: fixed;
+}
+
+.altLogo {
+  position: absolute;
+}
+
+.white li a {
+  color: white;
+}
+
+.black li a {
+  color: #1d1d1d;
+}
+
+
+
+/* Triangle */
+#triangle-left {
+  position: absolute;
+  /* width: 100%; */
+  height: 0;
+  border-top: 500px solid transparent;
+  border-left: 50vw solid white;
+  border-bottom: 500px solid transparent;
+  /* margin-top: 300px; */
+  top: 400px;
+  /* left: 0; */
+  /* z-index: 10; */
+}
+
+#triangle-left nav {
+  /* position: fixed;
+  left: -50vw;
+  top: -500px;
+  z-index:1000; */
+}
+
+/* #triangle-left nav li {
+  font-size: .7em;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-transform: uppercase;
+}
+#triangle-left nav li a {
+  color: black;
+  display: block;
+  padding: 20px;
+  letter-spacing: 1px;
+} */
+
+
+
+/* Triangle Right */
+#triangle-right {
+  position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 500px solid transparent;
+	border-right: 50vw solid white;
+	border-bottom: 500px solid transparent;
+  top: 400px;
+  right: 0;
+}
+
+
+
+/* Content */
+.content {
+  padding: 100px 5% 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.content p {
+  text-align: center;
+  line-height: 40px;
+  letter-spacing: 5px;
+}
+
+
+
+/**********************************************
+MAIN
+***********************************************/
+
+/* Skewed Box */
+.skewedBox {
+  background: lightblue;
+  position: relative;
+  padding: 100px 0;
+  transform: skew(0deg, 5deg);
+  /* z-index: -1000; */
+}
+
+.skewedBox-container {
+  transform: skew(0deg, -5deg);
+  padding: 100px 5%;
+}
+
+.skewedBox-container h1,
+.skewedBox-container p {
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  letter-spacing: 5px;
+}
+
+
+
+#section {
+  padding: 200px 5%;
+  position: relative;
+  transform: skew(0deg, 5deg);
+  padding-bottom: 500px;
+  margin-bottom: -300px;
+}
+#section p {
+  color: black;
+  text-align: center;
+  line-height: 40px;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+  transform: skew(0deg, -5deg);
+}
+
+
+
+/* Floating Boxes */
+.floating-boxes {
+  background: pink url('../img/background.jpg') no-repeat fixed;
+  background-size: cover;
+  height: 2000px;
+  position: relative;
+  /* z-index: -1000; */
+}
+
+.overlay {
+  background: rgba(0,0,0,0.3);
+  background-size: cover;
+  height: 2000px;
+}
+
+
+
+/* Primary */
+#primary {
+  background: pink;
+  height: 500px;
+  width: 415px;
+  padding: 20px;
+  position: absolute;
+  top: 10%;
+  left: 6%;
+
+  /* transform: translate(0, 20%); */
+}
+
+#primary .content {
+  background: white;
+  height: 505px;
+  width: 415px;
+  padding: 20px;
+  position: absolute;
+  top: -5%;
+  left: -5%;
+}
+
+
+
+/* Secondary */
+#secondary {
+  background: lightyellow;
+  height: 465px;
+  width: 415px;
+  padding: 20px;
+  position: absolute;
+  right: 4%;
+  bottom: 37%;
+}
+#secondary .content {
+  background: white;
+  height: 465px;
+  width: 415px;
+  padding: 20px;
+  position: absolute;
+  top: -5%;
+  left: -5%;
+}
+
+
+
+/* Tertiary */
+#tertiary {
+  background: lightblue;
+  height: 465px;
+  width: 415px;
+  padding: 20px;
+  position: absolute;
+  left: 6%;
+  bottom: 10%;
+}
+#tertiary .content {
+  background: white;
+  height: 465px;
+  width: 415px;
+  padding: 20px;
+  position: absolute;
+  top: -5%;
+  left: -5%;
+}
