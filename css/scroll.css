@@ -7,7 +7,8 @@
 body {
   margin: 0;
   /* height: 2000px; */
-  /* background: black; */
+  /* background: red; */
+  color: #333;
 }
 
 ul {
@@ -21,6 +22,11 @@ a {
   color: black;
 }
 
+.overlay {
+  background: rgba(0,0,0,0.3);
+  background-size: cover;
+}
+
 
 
 /*************************************************
@@ -29,14 +35,17 @@ HERO
 
 .hero {
   background: pink url('../img/background.jpg') no-repeat fixed;
+  background-position: 100% 4%;
   background-size: cover;
   position: relative;
   /* width: 100%; */
-  height: 900px;
+  height: 100vh;
   /* overflow: hidden; */
 }
 
-
+.hero .overlay {
+  /* height: 900px; */
+}
 
 /* Vertical Nav */
 .nav {
@@ -81,6 +90,16 @@ HERO
   color: #1d1d1d;
 }
 
+/* down arrow */
+.hero svg {
+  position: absolute;
+  text-align: center;
+  color: black;
+  width: 5vw;
+  left: calc(50% - 2.5vw);
+  bottom: 100px;
+  fill: black;
+}
 
 
 /* Triangle */
@@ -91,10 +110,10 @@ HERO
   border-top: 500px solid transparent;
   border-left: 50vw solid white;
   border-bottom: 500px solid transparent;
-  /* margin-top: 300px; */
-  top: 400px;
+  /* margin-top: calc(100vh - 590.5px); */
+  top: calc(100vh - 500px);
   /* left: 0; */
-  /* z-index: 10; */
+  /* z-index: 1; */
 }
 
 #triangle-left nav {
@@ -127,7 +146,7 @@ HERO
 	border-top: 500px solid transparent;
 	border-right: 50vw solid white;
 	border-bottom: 500px solid transparent;
-  top: 400px;
+  top: calc(100vh - 500px);
   right: 0;
 }
 
@@ -135,9 +154,11 @@ HERO
 
 /* Content */
 .content {
+  background: white;
   padding: 100px 5% 250px;
   overflow: hidden;
   position: relative;
+  margin-bottom: 20px
 }
 
 .content p {
@@ -154,11 +175,14 @@ MAIN
 
 /* Skewed Box */
 .skewedBox {
-  background: lightblue;
+  background: #add8e6;
   position: relative;
-  padding: 100px 0;
+  padding: 50px 0;
   transform: skew(0deg, 5deg);
   /* z-index: -1000; */
+  margin-top: -80px;
+  overflow: hidden;
+  /* height: 600px; */
 }
 
 .skewedBox-container {
@@ -174,22 +198,52 @@ MAIN
   letter-spacing: 5px;
 }
 
-
-
-#section {
+/* Sections */
+/* Section1 */
+#section1 {
+  background: white;
   padding: 200px 5%;
   position: relative;
   transform: skew(0deg, 5deg);
   padding-bottom: 500px;
   margin-bottom: -300px;
 }
-#section p {
+#section1 p {
   color: black;
   text-align: center;
   line-height: 40px;
   letter-spacing: 5px;
   margin-bottom: 30px;
   transform: skew(0deg, -5deg);
+}
+
+
+
+/* Section2 */
+#section2 {
+  background: white;
+  padding: 100px 10% 150px;
+  margin-bottom: 297px;
+}
+
+#section2 h2 {
+  font-size: 1.7em;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#section2 div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#section2 div:nth-child(2) {
+  margin-bottom: 100px;
+}
+
+#section2 img {
+  height: 150px;
+  width: 150px;
 }
 
 
@@ -203,9 +257,7 @@ MAIN
   /* z-index: -1000; */
 }
 
-.overlay {
-  background: rgba(0,0,0,0.3);
-  background-size: cover;
+.floating-boxes .overlay {
   height: 2000px;
 }
 
@@ -276,4 +328,117 @@ MAIN
   position: absolute;
   top: -5%;
   left: -5%;
+}
+
+
+
+/**********************************************
+FOOTER
+***********************************************/
+
+/* Universal */
+footer {
+	background: #add8e6;
+	color: white;
+	padding: 70px 5%;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+.footer-stuff {
+  display: flex;
+  justify-content: space-between;
+	width: 100%;
+}
+.footer-stuff strong {
+  display: block;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+footer a {
+	color: white;
+}
+
+.social,
+.sign-up {
+  margin: auto ;
+}
+
+
+
+/* Social */
+.social ul {
+  display: flex;
+}
+
+.social ul li a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+
+/* Sign-Up */
+.sign-up  {
+  /* margin-bottom: 20px; */
+}
+.sign-up p {
+  margin: 0 0 10px;
+}
+
+
+
+/* Email Input */
+.sign-up input[type="email"] {
+  padding: 11px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: none;
+}
+.sign-up input[type="email"]:focus {
+  outline: 0;
+  color: lightblue;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.sign-up input[type="email"]::placeholder {
+  color: lightblue;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Submit Input */
+input[type="submit"] {
+  background: lightblue;
+  border: 1px solid white;
+  padding: 10px;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  transition: all .3s ease-in-out;
+}
+input[type="submit"]:hover {
+  background: white;
+  color: lightblue;
+}
+
+/* fa fa */
+.social [class*="fa fa-"] {
+  background-color: #333;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+  height: 50px;
+  line-height: 45px;
+  margin: auto 3px;
+  width: 50px;
+  font-size: 25px;
+  text-align: center;
+  border: 2px solid white;
+  padding-left: 1px;
 }
